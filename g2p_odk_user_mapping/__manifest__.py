@@ -9,7 +9,7 @@
     "depends": ["base", "account", "g2p_odk_importer"],
     "data": [
         "security/ir.model.access.csv",
-        "views/registration_backend_view.xml",
+        "views/registration_user_backend_view.xml",
         "views/odk_app_user.xml",
     ],
     "assets": {
