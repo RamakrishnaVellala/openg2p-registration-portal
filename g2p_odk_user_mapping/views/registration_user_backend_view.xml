@@ -1,0 +1,48 @@
+<odoo>
+
+    <!-- Search View -->
+    <record id="res_partner_view_search_g2p_inherits" model="ir.ui.view">
+        <field name="name">res.partner.search.inherits</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.res_partner_view_search" />
+        <field name="arch" type="xml">
+            <filter name="supplier" position="attributes">
+                <attribute name="string">Registration Portal User</attribute>
+            </filter>
+        </field>
+    </record>
+
+    <record id="view_res_partner_form_inherit_registration" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.registration</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="ODk User Configuration">
+                    <field
+                        name="odk_config_id"
+                        options="{'no_create': True}"
+                        invisible="context.get('default_supplier_rank')  &lt; 1"
+                    />
+                    <field
+                        name="odk_app_user"
+                        options="{'no_create': True}"
+                        invisible="context.get('default_supplier_rank') &lt; 1"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Action Name -->
+    <record id="account.res_partner_action_supplier" model="ir.actions.act_window">
+        <field name="name">Registration Portal User</field>
+    </record>
+
+    <menuitem
+        id="menu_account_supplier"
+        name="Registration Portal User"
+        action="account.res_partner_action_supplier"
+        sequence="5"
+    />
+</odoo>
