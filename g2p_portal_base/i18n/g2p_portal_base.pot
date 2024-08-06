@@ -57,7 +57,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.about_us_page
-msgid "About Us | Registration Portal"
+msgid "About Us | Service Provider Portal"
 msgstr ""
 
 #. module: g2p_portal_base
@@ -68,7 +68,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.contact_us_page
-msgid "Contact Us| Registration Portal"
+msgid "Contact Us| Service Provider Portal"
 msgstr ""
 
 #. module: g2p_portal_base
@@ -106,7 +106,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.home_page
-msgid "Home | Registration Portal"
+msgid "Home | Service Provider Portal"
 msgstr ""
 
 #. module: g2p_portal_base
@@ -127,7 +127,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.profile_page
-msgid "My Profile | Registration Portal"
+msgid "My Profile | Service Provider Portal"
 msgstr ""
 
 #. module: g2p_portal_base
@@ -142,7 +142,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.other_page
-msgid "Other| Registration Portal"
+msgid "Other| Service Provider Portal"
 msgstr ""
 
 #. module: g2p_portal_base
@@ -179,7 +179,7 @@ msgstr ""
 #. module: g2p_portal_base
 #: model:ir.ui.menu,name:g2p_portal_base.menu_account_supplier
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.res_partner_view_search_g2p_inherit
-msgid "Registration"
+msgid "Service Provider"
 msgstr ""
 
 #. module: g2p_portal_base
