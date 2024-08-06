@@ -10,6 +10,7 @@
     "depends": [
         "g2p_portal_base",
         "g2p_registry_membership",
+        "g2p_enumerator",
         "website",
     ],
     "data": [
