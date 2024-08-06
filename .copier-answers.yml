@@ -18,9 +18,9 @@ org_name: OpenG2P
 org_slug: OpenG2P
 rebel_module_groups: []
 repo_description: This repo contains openg2p auth related modules.
-repo_name: OpenG2P Auth
-repo_slug: openg2p-auth
-repo_website: https://github.com/OpenG2P/openg2p-importer
+repo_name: OpenG2P Registration Portal
+repo_slug: openg2p-registration-portal
+repo_website: https://github.com/OpenG2P/openg2p-registration-portal
 use_pyproject_toml: true
 use_ruff: true
 
