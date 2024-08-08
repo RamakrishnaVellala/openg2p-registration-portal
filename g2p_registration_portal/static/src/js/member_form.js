@@ -111,7 +111,7 @@ $(document).on("click", "#member_submit", function () {
     }
 
     $.ajax({
-        url: "/registration/individual/create/",
+        url: "/registration/member/create/",
         method: "POST",
         data: {
             group_id: group,
