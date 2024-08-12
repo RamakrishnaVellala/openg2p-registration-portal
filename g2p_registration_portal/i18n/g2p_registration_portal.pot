@@ -216,13 +216,6 @@ msgid ""
 msgstr ""
 
 #. module: g2p_registration_portal
-#: model_terms:ir.ui.view,arch_db:g2p_registration_portal.individual_registrant_form_template
-msgid ""
-"<span class=\"s_website_form_mark\">\n"
-"                                                                                            *</span>"
-msgstr ""
-
-#. module: g2p_registration_portal
 #: model_terms:ir.ui.view,arch_db:g2p_registration_portal.group_update_form_template
 msgid "<span class=\"s_website_form_mark\"> *</span>"
 msgstr ""
@@ -528,6 +521,7 @@ msgstr ""
 
 #. module: g2p_registration_portal
 #: model_terms:ir.ui.view,arch_db:g2p_registration_portal.group_list
+#: model_terms:ir.ui.view,arch_db:g2p_registration_portal.individual_list
 msgid "Status"
 msgstr ""
 
