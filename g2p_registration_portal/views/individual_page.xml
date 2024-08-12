@@ -7,7 +7,7 @@
             <div class="main-container">
                 <div class="container-adjuster">
                     <h5 class="all-title">Individual</h5>
-                    <a t-attf-href="/registration/individual/registrar/create/" style="float:right;">
+                    <a t-attf-href="/registration/individual/create/" style="float:right;">
                         <button type="button" class="btn btn-primary create-new"> Create New <span
                                 class="mx-1"
                             />
@@ -70,6 +70,7 @@
                                         <th>Last name</th>
                                         <th>Gender</th>
                                         <th>Last update</th>
+                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -423,7 +424,7 @@
 
                         <form
                             id="creategroupForm"
-                            action="/registration/individual/beneficiary/create/submit"
+                            action="/registration/individual/create/submit"
                             method="POST"
                             enctype="multipart/form-data"
                         >
@@ -566,8 +567,7 @@
                                                                     Gender</span>
                                                                 <span class="s_website_form_mark"> *</span>
                                                             </label>
-                                                            <span class="s_website_form_mark">
-                                                                                            *</span>
+
                                                             <div class="row">
                                                                 <div class="col">
                                                                     <select

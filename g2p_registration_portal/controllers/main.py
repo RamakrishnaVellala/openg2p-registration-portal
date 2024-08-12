@@ -10,17 +10,28 @@ _logger = logging.getLogger(__name__)
 class G2PregistrationBeneficiaryManagement(http.Controller):
     @http.route("/registration/group", type="http", auth="user", website=True)
     def group_list(self, **kw):
-        group = (
-            request.env["res.partner"]
-            .sudo()
-            .search(
-                [
-                    ("active", "=", True),
-                    ("is_registrant", "=", True),
-                    ("is_group", "=", True),
-                ]
-            )
-        )
+        user = request.env.user
+
+        domain = [
+            ("active", "=", True),
+            ("is_registrant", "=", True),
+            ("is_group", "=", True),
+        ]
+
+        partner = user.partner_id
+
+        subdomain = [("user_id", "=", user.id)]
+
+        if partner and partner.odk_app_user:
+            subdomain = [
+                "|",
+                ("enumerator_id.enumerator_user_id", "=", partner.odk_app_user.odk_user_id),
+                ("user_id", "=", user.id),
+            ]
+
+        domain += subdomain
+
+        group = request.env["res.partner"].sudo().search(domain)
 
         return request.render("g2p_registration_portal.group_list", {"groups": group})
 
@@ -55,19 +66,19 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                 beneficiary_id = request.env["res.partner"].sudo().browse(int(kw.get("group_id")))
             else:
                 if head_name:
-                    beneficiary_obj = (
-                        request.env["res.partner"]
-                        .sudo()
-                        .create(
-                            {
-                                "name": head_name,
-                                "is_registrant": True,
-                                "is_group": True,
-                                "birthdate": kw.get("dob"),
-                                "gender": kw.get("gender"),
-                            }
-                        )
-                    )
+                    user = request.env.user
+
+                    data = {
+                        "name": head_name,
+                        "is_registrant": True,
+                        "is_group": True,
+                        "birthdate": kw.get("dob"),
+                        "gender": kw.get("gender"),
+                        "user_id": user.id,
+                    }
+
+                    beneficiary_obj = request.env["res.partner"].sudo().create(data)
+
                     beneficiary_id = beneficiary_obj.id
             beneficiary = request.env["res.partner"].sudo().browse(beneficiary_id)
 
@@ -118,6 +129,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                     "individuals": beneficiary.group_membership_ids.mapped("individual"),
                 },
             )
+
         except Exception:
             return request.render(
                 "g2p_registration_portal.error_template",
@@ -160,9 +172,9 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                 {"error_message": "An error occurred. Please try again later."},
             )
 
-    # Creating members
+    # Creating Group members
     @http.route(
-        ["/registration/individual/create/"],
+        ["/registration/member/create/"],
         type="http",
         auth="user",
         website=True,
@@ -213,6 +225,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
             given_name = kw.get("given_name")
             family_name = kw.get("family_name")
             addl_name = kw.get("addl_name")
+            user = request.env.user
 
             name = f"{given_name}, {addl_name} {family_name}"
 
@@ -225,6 +238,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                 "gender": kw.get("gender"),
                 "is_registrant": True,
                 "is_group": False,
+                "user_id": user.id,
             }
 
             # TODO: Relationship logic need to build later
@@ -338,10 +352,12 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
             _logger.error("Error occurred during member submit: %s", e)
             return json.dumps({"error": "Failed to update member details"})
 
-    ############### Controller for Individual Benificiary Creation ################
+    ############### Controller for Individual Creation ################
 
     @http.route("/registration/individual", type="http", auth="user", website=True)
     def individual_list(self, **kw):
+        user = request.env.user
+
         individual = (
             request.env["res.partner"]
             .sudo()
@@ -350,13 +366,14 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                     ("active", "=", True),
                     ("is_registrant", "=", True),
                     ("is_group", "=", False),
+                    ("user_id", "=", user.id),
                 ]
             )
         )
         return request.render("g2p_registration_portal.individual_list", {"individual": individual})
 
     @http.route(
-        ["/registration/individual/registrar/create/"],
+        ["/registration/individual/create/"],
         type="http",
         auth="user",
         website=True,
@@ -370,13 +387,15 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
         )
 
     @http.route(
-        ["/registration/individual/beneficiary/create/submit"],
+        ["/registration/individual/create/submit"],
         type="http",
         auth="user",
         website=True,
         csrf=False,
     )
     def individual_create_submit(self, **kw):
+        user = request.env.user
+
         try:
             name = ""
             if kw.get("family_name"):
@@ -399,6 +418,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                     "birthdate": birthdate,
                     "gender": kw.get("gender"),
                     "email": kw.get("email"),
+                    "user_id": user.id,
                     "is_registrant": True,
                     "is_group": False,
                 }
