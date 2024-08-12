@@ -167,6 +167,12 @@ msgid "Password"
 msgstr ""
 
 #. module: g2p_portal_base
+#: model:ir.ui.menu,name:g2p_portal_base.menu_account_supplier
+#: model_terms:ir.ui.view,arch_db:g2p_portal_base.res_partner_view_search_g2p_inherits
+msgid "Registration Portal User"
+msgstr ""
+
+#. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.login_page
 msgid "Reset Password"
 msgstr ""
@@ -174,12 +180,6 @@ msgstr ""
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.base
 msgid "Search here"
-msgstr ""
-
-#. module: g2p_portal_base
-#: model:ir.ui.menu,name:g2p_portal_base.menu_account_supplier
-#: model_terms:ir.ui.view,arch_db:g2p_portal_base.res_partner_view_search_g2p_inherit
-msgid "Service Provider"
 msgstr ""
 
 #. module: g2p_portal_base
