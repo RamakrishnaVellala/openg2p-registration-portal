@@ -94,12 +94,6 @@ msgid "Partner"
 msgstr ""
 
 #. module: g2p_odk_user_mapping
-#: model:ir.ui.menu,name:g2p_odk_user_mapping.menu_account_supplier
-#: model_terms:ir.ui.view,arch_db:g2p_odk_user_mapping.res_partner_view_search_g2p_inherits
-msgid "Registration Portal User"
-msgstr ""
-
-#. module: g2p_odk_user_mapping
 #: model:ir.model.fields,field_description:g2p_odk_user_mapping.field_res_partner__session
 #: model:ir.model.fields,field_description:g2p_odk_user_mapping.field_res_users__session
 msgid "Session Token"
