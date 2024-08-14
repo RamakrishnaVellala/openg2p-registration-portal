@@ -33,6 +33,21 @@
                                     </div>
                                 </div>
 
+                                <div class="col-lg-6">
+                                    <div class="s_website_form_field">
+                                        <label class="s_website_form_label" for="EID">
+                                            <span
+                                                class="s_website_form_label_content"
+                                                style="color: #666666;"
+                                            >Enumerator ID</span>
+                                        </label>
+                                        <div class="beneficiary-value">
+                                            <t
+                                                t-out="current_partner['eid'] if current_partner['eid'] else '&#8209;'"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row">
