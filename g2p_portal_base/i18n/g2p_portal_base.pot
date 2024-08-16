@@ -24,6 +24,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.profile_page
 msgid ""
 "<span class=\"s_website_form_label_content\" style=\"color: "
+"#666666;\">Enumerator ID</span>"
+msgstr ""
+
+#. module: g2p_portal_base
+#: model_terms:ir.ui.view,arch_db:g2p_portal_base.profile_page
+msgid ""
+"<span class=\"s_website_form_label_content\" style=\"color: "
 "#666666;\">Mobile Number</span>"
 msgstr ""
 
