@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <!-- TODO: Remove all hardcoding -->
-    <template id="login_page" name="G2P Service Provider Login">
+    <template id="login_page" name="G2P Registration Portal Login">
 
         <t t-call="g2p_portal_base.base">
             <t t-set="no_header" t-value="1" />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <!-- TODO: Remove all hardcoding -->
-    <template id="other_page" name="G2P Self Service Other">
+    <template id="other_page" name="G2P Registration Portal Other">
         <t t-call="g2p_portal_base.base">
-            <t t-set="title"> Other| Service Provider Portal</t>
+            <t t-set="title"> Other|Registration Portal</t>
             <div class="main-container">
                 <div class="container-adjuster">
                     <h5 class='all-title'>Other</h5>

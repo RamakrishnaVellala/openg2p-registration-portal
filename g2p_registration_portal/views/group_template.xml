@@ -3,7 +3,7 @@
     <!-- #list -->
     <template id="group_list" name="G2P Service Provider group">
         <t t-call="g2p_portal_base.base">
-            <t t-set="title">List of group beneficiary | Service Provider Portal</t>
+            <t t-set="title">List of group beneficiary |Registration Portal</t>
             <div class="main-container">
                 <div class="container-adjuster">
                     <h5 class="all-title">Household</h5>
@@ -139,7 +139,7 @@
     <!-- Update -->
     <template id="group_update_form_template" name="G2P Service Provider group update request">
         <t t-call="g2p_portal_base.base">
-            <t t-set="title">Group Update Request | Service Provider Portal</t>
+            <t t-set="title">Group Update Request |Registration Portal</t>
             <div class="main-container">
                 <div class="container-adjuster">
                     <h5 class="all-title">Update Household</h5>
@@ -735,7 +735,7 @@
     <!-- Create -->
     <template id="group_create_form_template" name="G2P Service Provider group create request">
         <t t-call="g2p_portal_base.base">
-            <t t-set="title">Household Create Request | Service Provider Portal</t>
+            <t t-set="title">Household Create Request |Registration Portal</t>
 
             <div class="main-container">
                 <div class="container-adjuster">

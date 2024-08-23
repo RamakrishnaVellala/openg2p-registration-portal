@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="about_us_page" name="G2P Service Provider About Us">
+    <template id="about_us_page" name="G2P Registration Portal About Us">
         <t t-call="g2p_portal_base.base">
-            <t t-set="title"> About Us | Service Provider Portal</t>
+            <t t-set="title"> About Us | Registration Portal</t>
             <div class="main-container">
                 <div class="container-adjuster">
                 <h5 class='all-title'>About Us</h5>
