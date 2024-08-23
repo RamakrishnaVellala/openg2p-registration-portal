@@ -64,7 +64,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.about_us_page
-msgid "About Us |Registration Portal"
+msgid "About Us | Registration Portal"
 msgstr ""
 
 #. module: g2p_portal_base
@@ -75,7 +75,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.contact_us_page
-msgid "Contact Us|Registration Portal"
+msgid "Contact Us| Registration Portal"
 msgstr ""
 
 #. module: g2p_portal_base
@@ -113,7 +113,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.home_page
-msgid "Home |Registration Portal"
+msgid "Home | Registration Portal"
 msgstr ""
 
 #. module: g2p_portal_base
@@ -134,7 +134,7 @@ msgstr ""
 
 #. module: g2p_portal_base
 #: model_terms:ir.ui.view,arch_db:g2p_portal_base.profile_page
-msgid "My Profile |Registration Portal"
+msgid "My Profile | Registration Portal"
 msgstr ""
 
 #. module: g2p_portal_base
