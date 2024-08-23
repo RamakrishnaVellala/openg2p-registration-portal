@@ -361,7 +361,7 @@ msgstr ""
 
 #. module: g2p_registration_portal
 #: model_terms:ir.ui.view,arch_db:g2p_registration_portal.group_update_form_template
-msgid "Group Update Request | Service Provider Portal"
+msgid "Group Update Request |Registration Portal"
 msgstr ""
 
 #. module: g2p_registration_portal
@@ -374,7 +374,7 @@ msgstr ""
 
 #. module: g2p_registration_portal
 #: model_terms:ir.ui.view,arch_db:g2p_registration_portal.group_create_form_template
-msgid "Household Create Request | Service Provider Portal"
+msgid "Household Create Request |Registration Portal"
 msgstr ""
 
 #. module: g2p_registration_portal
@@ -414,7 +414,7 @@ msgstr ""
 #. module: g2p_registration_portal
 #: model_terms:ir.ui.view,arch_db:g2p_registration_portal.individual_registrant_form_template
 #: model_terms:ir.ui.view,arch_db:g2p_registration_portal.individual_update_form_template
-msgid "Individual Create Request | Service Provider Portal"
+msgid "Individual Create Request |Registration Portal"
 msgstr ""
 
 #. module: g2p_registration_portal
@@ -445,7 +445,7 @@ msgstr ""
 
 #. module: g2p_registration_portal
 #: model_terms:ir.ui.view,arch_db:g2p_registration_portal.individual_list
-msgid "List of Individual beneficiary | Service Provider Portal"
+msgid "List of Individual beneficiary |Registration Portal"
 msgstr ""
 
 #. module: g2p_registration_portal
@@ -455,7 +455,7 @@ msgstr ""
 
 #. module: g2p_registration_portal
 #: model_terms:ir.ui.view,arch_db:g2p_registration_portal.group_list
-msgid "List of group beneficiary | Service Provider Portal"
+msgid "List of group beneficiary |Registration Portal"
 msgstr ""
 
 #. module: g2p_registration_portal
