@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 
 class G2PregistrationBeneficiaryManagement(http.Controller):
-    @http.route("/registration/group", type="http", auth="user", website=True)
+    @http.route("/portal/registration/group", type="http", auth="user", website=True)
     def group_list(self, **kw):
         user = request.env.user
 
@@ -36,7 +36,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
         return request.render("g2p_registration_portal.group_list", {"groups": group})
 
     @http.route(
-        ["/registration/group/create/"],
+        ["/portal/registration/group/create/"],
         type="http",
         auth="user",
         website=True,
@@ -51,7 +51,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
         )
 
     @http.route(
-        ["/registration/group/create/submit"],
+        ["/portal/registration/group/create/submit"],
         type="http",
         auth="user",
         website=True,
@@ -94,7 +94,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                 else:
                     _logger.error(f"Ignoring invalid key: {key}")
 
-            return request.redirect("/registration/group")
+            return request.redirect("/portal/registration/group")
 
         except Exception as e:
             _logger.error("Error occurred%s" % e)
@@ -104,7 +104,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
             )
 
     @http.route(
-        ["/registration/group/update/<int:_id>"],
+        ["/portal/registration/group/update/<int:_id>"],
         type="http",
         auth="user",
         website=True,
@@ -137,7 +137,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
             )
 
     @http.route(
-        ["/registration/group/update/submit/"],
+        ["/portal/registration/group/update/submit/"],
         type="http",
         auth="user",
         website=True,
@@ -163,7 +163,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                 else:
                     _logger.error(f"Ignoring invalid key: {key}")
 
-            return request.redirect("/registration/group")
+            return request.redirect("/portal/registration/group")
 
         except Exception as e:
             _logger.error("Error occurred%s" % e)
@@ -174,7 +174,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
 
     # Creating Group members
     @http.route(
-        ["/registration/member/create/"],
+        ["/portal/registration/member/create/"],
         type="http",
         auth="user",
         website=True,
@@ -278,7 +278,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
             _logger.error("ERROR LOG IN INDIVIDUAL%s", e)
 
     @http.route(
-        "/registration/member/update/",
+        "/portal/registration/member/update/",
         type="http",
         auth="user",
         website=True,
@@ -303,7 +303,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
             _logger.error("ERROR LOG IN UPDATE MEMBER%s", e)
 
     @http.route(
-        "/registration/member/update/submit/",
+        "/portal/registration/member/update/submit/",
         type="http",
         auth="user",
         website=True,
@@ -354,7 +354,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
 
     ############### Controller for Individual Creation ################
 
-    @http.route("/registration/individual", type="http", auth="user", website=True)
+    @http.route("/portal/registration/individual", type="http", auth="user", website=True)
     def individual_list(self, **kw):
         user = request.env.user
 
@@ -373,7 +373,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
         return request.render("g2p_registration_portal.individual_list", {"individual": individual})
 
     @http.route(
-        ["/registration/individual/create/"],
+        ["/portal/registration/individual/create/"],
         type="http",
         auth="user",
         website=True,
@@ -387,7 +387,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
         )
 
     @http.route(
-        ["/registration/individual/create/submit"],
+        ["/portal/registration/individual/create/submit"],
         type="http",
         auth="user",
         website=True,
@@ -423,7 +423,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                     "is_group": False,
                 }
             )
-            return request.redirect("/registration/individual")
+            return request.redirect("/portal/registration/individual")
 
         except Exception as e:
             _logger.error("Error occurred%s" % e)
@@ -433,7 +433,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
             )
 
     @http.route(
-        ["/registration/individual/update/<int:_id>"],
+        ["/portal/registration/individual/update/<int:_id>"],
         type="http",
         auth="user",
         website=True,
@@ -463,7 +463,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
             )
 
     @http.route(
-        "/registration/individual/update/submit",
+        "/portal/registration/individual/update/submit",
         type="http",
         auth="user",
         website=True,
@@ -496,7 +496,7 @@ class G2PregistrationBeneficiaryManagement(http.Controller):
                         "email": kw.get("email"),
                     }
                 )
-            return request.redirect("/registration/individual")
+            return request.redirect("/portal/registration/individual")
 
         except Exception as e:
             _logger.error("Error occurred%s" % e)

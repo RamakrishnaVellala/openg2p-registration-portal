@@ -8,13 +8,13 @@
 						<h5 class="card-heading">List of household</h5>
 						<hr />
 						<ul class="card-block">
-							<a href="/registration/group">
+							<a href="/portal/registration/group">
 								<li>
 									<div class="icon-image">
 										<img src="/g2p_portal_base/static/src/img/person_filled_FILL0_wght400_GRAD0_opsz48.png" class="img" />
 									</div>
 									<div>
-										<a href="/registration/group">
+										<a href="/portal/registration/group">
 											Household </a>
 										<p> Details</p>
 									</div>
@@ -22,20 +22,20 @@
 							</a>
 						</ul>
 						<div class="card-foot">
-							<a href="/registration/group" class="justify-content-center viewprograms group">View All</a>
+							<a href="/portal/registration/group" class="justify-content-center viewprograms group">View All</a>
 						</div>
 					</div>
 					<div class="card">
 						<h5 class="card-heading">List of Individuals</h5>
 						<hr />
 						<ul class="card-block">
-							<a href="/registration/individual">
+							<a href="/portal/registration/individual">
 								<li>
 									<div class="icon-image">
 										<img src="/g2p_portal_base/static/src/img/person_filled_FILL0_wght400_GRAD0_opsz48.png" class="img" />
 									</div>
 									<div>
-										<a href="/registration/individual">
+										<a href="/portal/registration/individual">
 											Individual </a>
 										<p> Details</p>
 									</div>
@@ -43,7 +43,7 @@
 							</a>
 						</ul>
 						<div class="card-foot">
-							<a href="/registration/individual" class="justify-content-center viewprograms group">View All</a>
+							<a href="/portal/registration/individual" class="justify-content-center viewprograms group">View All</a>
 						</div>
 					</div>
 

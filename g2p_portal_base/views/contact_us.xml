@@ -8,7 +8,7 @@
                     <h5 class='all-title'>Contact Us</h5>
                     <ol class="breadcrumb  breadcrumb-list bg-transparent">
                         <li class="breadcrumb-item">
-                            <a href="/registration">Home</a>
+                            <a href="/portal">Home</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                     </ol>

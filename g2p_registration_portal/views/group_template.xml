@@ -7,7 +7,7 @@
             <div class="main-container">
                 <div class="container-adjuster">
                     <h5 class="all-title">Household</h5>
-                    <a t-attf-href="/registration/group/create/" style="float:right;">
+                    <a t-attf-href="/portal/registration/group/create/" style="float:right;">
                         <button type="button" class="btn btn-primary create-new"> Create New <span
                                 class="mx-1"
                             />
@@ -17,7 +17,7 @@
 
                     <ol class="breadcrumb  breadcrumb-list bg-transparent col-6">
                         <li class="breadcrumb-item">
-                            <a href="/registration/home">Dashboard</a>
+                            <a href="/portal/home">Dashboard</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Household</li>
                     </ol>
@@ -112,7 +112,9 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <a t-attf-href="/registration/group/update/{{ group.id }}">
+                                                <a
+                                                    t-attf-href="/portal/registration/group/update/{{ group.id }}"
+                                                >
                                                     <button string="Update" type="object" class="view-button">
                                                         Update
                                                     </button>
@@ -147,12 +149,12 @@
                     <div class="form-template">
                         <ol class="breadcrumb form-layout-breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="/registration">
+                                <a href="/portal">
                                     Dashboard
                                 </a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="/registration/group">
+                                <a href="/portal/registration/group">
                                     Household
                                 </a>
                             </li>
@@ -168,7 +170,7 @@
                         </div>
                         <form
                             id="updategroupForm"
-                            action="/registration/group/update/submit/"
+                            action="/portal/registration/group/update/submit/"
                             method="POST"
                             enctype="multipart/form-data"
                         >
@@ -706,7 +708,7 @@
                                                 <button
                                                     type="button"
                                                     class="btn btn-outline-primary"
-                                                    onclick="location.href = '/registration/home';"
+                                                    onclick="location.href = '/portal/home';"
                                                 >
                                                     Cancel
                                                 </button>
@@ -744,12 +746,12 @@
 
                         <ol class="breadcrumb form-layout-breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="/registration/home">
+                                <a href="/portal/home">
                                     Dashboard
                                 </a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="/registration/group">
+                                <a href="/portal/registration/group">
                                     Household
                                 </a>
                             </li>
@@ -760,7 +762,7 @@
 
                         <form
                             id="creategroupForm"
-                            action="/registration/group/create/submit"
+                            action="/portal/registration/group/create/submit"
                             method="POST"
                             enctype="multipart/form-data"
                         >
@@ -954,7 +956,7 @@
                                                                             </td>
                                                                             <td>
                                                                                 <a
-                                                                                    t-attf-href="/registration/individual/update/?mem={{ individual.id }}&amp;group={{ group.id }}"
+                                                                                    t-attf-href="/portal/registration/individual/update/?mem={{ individual.id }}&amp;group={{ group.id }}"
                                                                                 >
                                                                                     <div
                                                                                         class="btn btn-icon rounded-0"
@@ -1253,7 +1255,7 @@
                                                 <button
                                                     type="button"
                                                     class="btn btn-outline-primary"
-                                                    onclick="location.href = '/registration/home';"
+                                                    onclick="location.href = '/portal/home';"
                                                 >
                                                     Cancel
                                                 </button>

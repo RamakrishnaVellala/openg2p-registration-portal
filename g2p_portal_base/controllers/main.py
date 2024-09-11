@@ -11,17 +11,17 @@ from odoo.addons.web.controllers.home import Home
 _logger = logging.getLogger(__name__)
 
 
-class registrationBaseContorller(http.Controller):
-    @http.route(["/registration"], type="http", auth="public", website=True)
+class PortalBaseController(http.Controller):
+    @http.route(["/portal"], type="http", auth="public", website=True)
     def portal_root(self, **kwargs):
         if request.session and request.session.uid:
-            return request.redirect("/registration/home")
+            return request.redirect("/portal/home")
         else:
-            return request.redirect("/registration/login")
+            return request.redirect("/portal/login")
 
-    @http.route(["/registration/login"], type="http", auth="public", website=True)
+    @http.route(["/portal/login"], type="http", auth="public", website=True)
     def registration_login(self, **kwargs):
-        redirect_uri = request.params.get("redirect") or "/registration/home"
+        redirect_uri = request.params.get("redirect") or "/portal/home"
         if request.session and request.session.uid:
             return request.redirect(redirect_uri)
 
@@ -36,12 +36,12 @@ class registrationBaseContorller(http.Controller):
 
         return request.render("g2p_portal_base.login_page", qcontext=context)
 
-    @http.route(["/registration/home"], type="http", auth="user", website=True)
+    @http.route(["/portal/home"], type="http", auth="user", website=True)
     def portal_home(self, **kwargs):
-        self.check_roles("registration")
+        self.check_roles("Registration Portal User")
         return request.render("g2p_portal_base.home_page")
 
-    @http.route(["/registration/myprofile"], type="http", auth="public", website=True)
+    @http.route(["/portal/myprofile"], type="http", auth="public", website=True)
     def portal_profile(self, **kwargs):
         if request.session and request.session.uid:
             current_partner = request.env.user.partner_id
@@ -52,20 +52,20 @@ class registrationBaseContorller(http.Controller):
                 },
             )
 
-    @http.route(["/registration/aboutus"], type="http", auth="public", website=True)
+    @http.route(["/portal/aboutus"], type="http", auth="public", website=True)
     def portal_about_us(self, **kwargs):
         return request.render("g2p_portal_base.about_us_page")
 
-    @http.route(["/registration/contactus"], type="http", auth="public", website=True)
+    @http.route(["/portal/contactus"], type="http", auth="public", website=True)
     def portal_contact_us(self, **kwargs):
         return request.render("g2p_portal_base.contact_us_page")
 
-    @http.route(["/registration/otherpage"], type="http", auth="public", website=True)
+    @http.route(["/portal/otherpage"], type="http", auth="public", website=True)
     def portal_other_page(self, **kwargs):
         return request.render("g2p_portal_base.other_page")
 
     def check_roles(self, role_to_check):
-        if role_to_check == "registration":
+        if role_to_check == "Registration Portal User":
             if not request.session or not request.env.user:
                 raise Unauthorized(_("User is not logged in"))
             if not request.env.user.partner_id.supplier_rank > 0:

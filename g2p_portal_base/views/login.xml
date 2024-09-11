@@ -16,12 +16,12 @@
                     <form
                         class="oe_login_form"
                         role="form"
-                        t-attf-action="/registration/login"
+                        t-attf-action="/portal/login"
                         method="post"
-                        onsubmit="this.action = '/registration/login' + location.hash"
+                        onsubmit="this.action = '/portal/login' + location.hash"
                     >
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
-                        <input type="hidden" name="redirect" value="/registration/home" />
+                        <input type="hidden" name="redirect" value="/portal/home" />
                         <div class="form-group field-login">
                             <label for="login">Email or Phone</label>
                             <input
